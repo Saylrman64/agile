@@ -1,0 +1,239 @@
+/* This css file is only for customizations that relate to the Issues icons including Tracker,
+   Status, and Category. All changes to these icon sets must be made here.
+   All other changes to customize css should be made in the applications.css or in other child
+   css as appropriate. */
+
+/* ICONS GENERAL  */
+table.issues tbody tr > td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* TRACKER ICONS */
+table.issues tbody tr > td.tracker {
+    padding-left: 34px;
+    text-align: justify;
+    vertical-align: middle;
+}
+
+/* Bug */
+table.issues tbody tr.tracker-1 > td.tracker {
+    background: url("../images/bug.png")left center no-repeat;
+}
+
+/* Feature */
+table.issues tbody tr.tracker-2 > td.tracker {
+    background: url("../images/feature.png")left center no-repeat;
+}
+
+/* Support */
+table.issues tbody tr.tracker-3 > td.tracker {
+    background: url("../images/support.png")left center no-repeat;
+}
+
+/*  Deprecation */
+table.issues tbody tr.tracker-4 > td.tracker {
+    background: url("../images/deprecation.png")left center no-repeat;
+}
+
+/*  Revision */
+table.issues tbody tr.tracker-5 > td.tracker {
+    background: url("../images/revision.png")left center no-repeat;
+}
+
+/* Tracker 6 */
+table.issues tbody tr.tracker-6 > td.tracker {
+    background: url("../images/task.png")left center no-repeat;
+}
+
+/*  Tracker 7 */
+table.issues tbody tr.tracker-7 > td.tracker {
+    background: url("../images/image.png")left center no-repeat;
+}
+
+/*  Tracker 8 */
+table.issues tbody tr.tracker-8 > td.tracker {
+    background: url("../images/image.png")left center no-repeat;
+}
+
+/*  Tracker 9 */
+table.issues tbody tr.tracker-9 > td.tracker {
+    background: url("../images/image.png")left center no-repeat;
+}
+
+/* Tracker 10 */
+table.issues tbody tr.tracker-10 > td.tracker {
+    background: url("../images/image.png")left center no-repeat;
+}
+
+/* Tracker 11 */
+table.issues tbody tr.tracker-11 > td.tracker {
+    background: url("../images/image.png")left center no-repeat;
+}
+
+/* Tracker 12 */
+table.issues tbody tr.tracker-12 > td.tracker {
+    background: url("../images/image.png")left center no-repeat;
+}
+
+/* Tracker 13 */
+table.issues tbody tr.tracker-13 > td.tracker {
+    background: url("../images/image.png")left center no-repeat;
+}
+
+
+/* STATUS ICONS */
+table.issues tbody tr > td.status {
+    padding-left: 34px;
+    text-align: justify;
+    vertical-align: middle;
+}
+
+/* New */
+table.issues tbody tr.status-1 > td.status {
+    background: url("../images/new.png") left center no-repeat;
+}
+
+/* In Progress */
+table.issues tbody tr.status-2 > td.status {
+    background: url("../images/inprogress.png") left center no-repeat;
+}
+
+/* Completed */
+table.issues tbody tr.status-3 > td.status {
+    background: url("../images/completed.png") left center no-repeat;
+}
+
+/* Followup */
+table.issues tbody tr.status-4 > td.status {
+    background: url("../images/followup.png") left center no-repeat;
+}
+
+/* Closed */
+table.issues tbody tr.status-5 > td.status {
+    background: url("../images/closed.png") left center no-repeat;
+}
+
+/* Rejected */
+table.issues tbody tr.status-6 > td.status {
+    background: url("../images/rejected.png") left center no-repeat;
+}
+
+/* For Review */
+table.issues tbody tr.status-7 > td.status {
+    background: url("../images/forreview.png") left center no-repeat;
+}
+
+/* Discovery */
+table.issues tbody tr.status-8 > td.status {
+    background: url("../images/discovery.png") left center no-repeat;
+}
+
+/* Status 9 */
+table.issues tbody tr.status-9 > td.status {
+    background: url("../images/image.png") left center no-repeat;
+}
+
+/* Re-Opened */
+table.issues tbody tr.status-10 > td.status {
+    background: url("../images/reopened.png") left center no-repeat;
+}
+
+/* On Hold */
+table.issues tbody tr.status-11 > td.status {
+    background: url("../images/onhold.png") left center no-repeat;
+}
+
+/* Waiting On */
+table.issues tbody tr.status-12 > td.status {
+    background: url("../images/waitingon.png") left center no-repeat;
+}
+
+/* Status 13 */
+table.issues tbody tr.status-13 > td.status {
+    background: url("../images/approvalrequired.png") left center no-repeat;
+}
+
+/* Status  14 */
+table.issues tbody tr.status-14 > td.status {
+    background: url("../images/approved.png") left center no-repeat;
+}
+
+/* Status 15 */
+table.issues tbody tr.status-15 > td.status {
+    background: url("../images/notapproved.png") left center no-repeat;
+}
+
+/* Status 16 */
+table.issues tbody tr.status-16 > td.status {
+    background: url("../images/queued.png") left center no-repeat;
+}
+
+/* Status 17 */
+table.issues tbody tr.status-17 > td.status {
+    background: url("../images/testing.png") left center no-repeat;
+}
+
+
+table.issues tbody tr > td.cf_1 {
+    padding-left: 34px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Communications & Collaboration */
+.communications {
+    background: url("../images/communications.png") left center no-repeat;
+}
+
+/* Finance & Accounting */
+.finance {
+    background: url("../images/finance.png") left no-repeat;
+}
+
+/* Human Resources */
+.humanresources {
+    background: url("../images/humanresources.png") left center no-repeat;
+}
+
+/* Marketing */
+.marketing {
+    background: url("../images/marketing.png") left center no-repeat;
+}
+
+/* Organization Infrastructure */
+.organization {
+    background: url("../images/organization.png") left center no-repeat;
+}
+
+/* Procurement & Logistics */
+.logistics {
+    background: url("../images/logistics.png") left center no-repeat;
+}
+
+/* Production Operations */
+.production {
+    background: url("../images/production.png") left center no-repeat;
+}
+
+/* Research & Development */
+.research {
+    background: url("../images/research.png") left center no-repeat;
+}
+
+/* Sales */
+.sales {
+    background: url("../images/sales.png") left center no-repeat;
+}
+
+/* Service Delivery */
+.service {
+    background: url("../images/service.png") left center no-repeat;
+}
+
+.icon-adjust
+{
+   background-size: contain;
+   padding-left: 24px;
+}

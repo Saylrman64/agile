@@ -1,0 +1,15 @@
+/* All these code snippets need to be moved either to the RedmineUp plugin css or to the appropriate plugin css file when we're ready to implement the changes. */
+
+/* MP 2024.11.09 - For Progressive Project plugin */
+time.progressive-overdue {
+    display: block;
+}
+
+/* End Progressive Project plugin */
+
+
+/* MP 2024.11.10 - Add the word Master to Forums (Questions) top menu item. */
+body.theme-Next-level.project-getting-to-the-next-level.has-main-menu.controller-questions.action-index.avatars-on a.questions:after {
+    content: ' Master';
+}
+/* END */

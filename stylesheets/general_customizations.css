@@ -1,0 +1,373 @@
+/* These are the customizations that make the base Next Level theme more Roadmap & Strategy friendly.
+   1) Changes that are intended for the core Redmine (regardless of plugin or theme) should be placed
+      in the application.css file.
+   2) All general changes to the Next Level theme should be entered here.
+   3) Regardless of which file and where css changes are made, please keep all changes for a give pl>
+     grouped together.
+*/
+
+
+/* MP 2024.08.05 - We don't want to see Easy Gantt in top menu. */
+#top-menu a.easy-gantt {
+        display: none;
+}
+
+/* MP 2024.08.05 - We don't want to see Spent Time in App menu. */
+#main-menu a.time-entries {
+        display: none;
+}
+
+/* MP 2024.11.02 - Added this after move to Redmine 5 for new Next Level header to push
+   the main window down ONLY when there is no app menu visible. */
+.controller-welcome.action-index #header,
+.controller-my.action-page #header,
+.has-main-menu.controller-projects.action-index #header,
+.has-main-menu.controller-contacts.action-index #header,
+.has-main-menu.controller-people.action-index #header,
+.has-main-menu.controller-questions_sections.action-index #header,
+.has-main-menu.controller-resource_bookings.action-index #header,
+.has-main-menu.controller-spent_time.action-index #header,
+.controller-admin.action-index #header {
+    padding-bottom: 10px;
+}
+
+/* MP 2024.11.02 - Added this after move to Redmine 5 to remove app menu from some pages
+   ONLY when it is not desired. */
+.has-main-menu.controller-projects.action-index #main-menu,
+.has-main-menu.controller-contacts.action-index #main-menu,
+.has-main-menu.controller-people.action-index #main-menu,
+.has-main-menu.controller-questions_sections.action-index #main-menu,
+.has-main-menu.controller-resource_bookings.action-index #main-menu,
+.has-main-menu.controller-spent_time.action-index #main-menu,
+.controller-admin.action-index #main-menu {
+    display: none;
+}
+
+#main-menu a.projects {
+        display: none;
+}
+
+/* Add the word "Master" after questions title. */
+.has-main-menu.controller-questions_sections.action-index.avatars-on h2:after, #top-menu a.questions:after {
+    content: ' Master';
+}
+
+/* Project board (Roadmap & Strategy) table and progress width changes */
+/* Mostly related to Progressive Project List plugin formatting */
+.red-text {
+        color: red;
+}
+
+ul.versions {
+        list-style-type: none;
+}
+
+.version-project {
+        font-size: small;
+        font-weight: bold;
+}
+
+.margin-adjust {
+        margin-top: -15px;
+        margin-left: -35px;
+}
+
+table.cf_setting tr {
+        text-align: center;
+        min-width: 100px;
+}
+
+table.cf_setting tr th {
+        padding-left: 30px;
+}
+
+table.cf_setting tr select {
+        min-width: 100px;
+}
+
+.text-blue {
+        color: #8bb5dc;
+}
+
+.progressive-project-version {
+       clear: none !important;
+}
+
+#projects-index ul.projects div.root a.project {
+    font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+}
+
+.version-overview table.progress {
+    width: 90%;
+}
+
+div#content .badge {
+    margin-left: 28px;
+}
+
+p.percent {
+    margin: 3px 0 3px;
+}
+
+#projects-index ul.projects li.child {
+    margin-top: 20px;
+}
+
+#projects-index ul.projects li.child div.child div.wiki {
+    margin-left: 30px;
+}
+
+#projects-index ul.projects div.root a.project {
+    font-size: 16px;
+}
+
+#projects-index ul.projects li.root {
+    margin-bottom: 30px !important;
+}
+
+
+/* Mostly changes to the Initiatives (Versions) page */
+
+.progressive-project-issues:before {
+    font-family: FontAwesomeSolid;
+    content: "\f02c";
+    padding-right: 5px; 
+    font-size: 14px;
+    color: #008080;
+}
+
+.version-overview {
+    margin-top: -9px;
+    margin-bottom: -5px;
+}
+
+.version-overview ul.version_cf {
+    list-style-type: none;
+    padding-left:0.3em;
+    margin-top:-7px;
+}
+.version_cf_initiative_desired_begin_date:before {
+    font-family: FontAwesomeSolid;
+    content: "\f073";
+    font-size: 14px;
+    color: green;
+    padding-right: 4px;
+}
+.version-parent-project {
+    background-image: url("../images/strategy.png");
+    background-repeat: no-repeat;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    background-size: 15px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.version-text {
+    background-image: url(../images/initiative.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    padding-bottom: 16px;
+    padding-left: 35px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* We need this single change to make the progress bar align correctly but it intereferes
+   with Roadmap page. */
+div#projects-index table.progress {
+    width: 90% !important;
+    margin-top: 5px;
+/* -  margin-left: -35px;  */
+}
+
+time:before{
+    font-family: FontAwesomeSolid;
+    content: "\f073";
+    padding-left: 5px;
+    font-size: 14px;
+    color: #008080;
+    padding-right: 4px;
+}
+
+time.progressive-overdue:before {
+    font-family: FontAwesomeSolid;
+    content: "\f334";
+    padding-left: 5px;
+    font-size: 14px;
+    color: red;
+    padding-right: 4px;
+}
+
+
+#content p .my-project {
+display: none;
+}
+
+.my-project {
+    background: url("../images/strategy.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+}
+
+.project.child.leaf.my-project {
+    background-size: 25px 25px;
+    padding-left: 30px;
+}
+
+#projects-index ul.projects div.root a.project {
+    background-image: url("../images/strategy.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    padding-bottom: 12px;
+    padding-left: 35px;
+}
+
+.wiki.description {
+    margin-left: 35px;
+}
+
+
+/* Tweaks to icons for Initiatives on the Roadmap & Strategy (Projects) page,
+   and for icons for Initiatives and Strategy on the Gannt Chart page */
+h3.version {
+    background-attachment: scroll;
+    background-clip: initial;
+    background-color: rgba(0, 0, 106, 0);
+    background-image: url("../images/initiative.png");
+    background-origin: content-box;
+    background-position: -35px 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    margin-left: -45px;
+    padding-bottom: 5px;
+    padding-left: 75px;
+    padding-top: 25px;
+}
+
+.icon-package {
+    background-image: url(../images/initiative.png);
+    background-size: 16px 16px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.icon-projects {
+    background-image: url(../images/strategy.png);
+    background-size: 20px 20px;
+}
+
+.gantt_subjects div {
+    line-height: 24px;
+}
+
+.gantt_subjects div {
+    height: 21px;
+}
+
+.icon.icon-projects {
+    padding-top: 6px;
+}
+
+div.project-name {
+    top: 59px;
+    height: 27px;
+    margin-top: 4px;
+}
+
+
+/* Roadmap & Strategy (Project) page background changes */
+
+ul.projects.root {
+    background-image: url(../images/roadmap-n-strategy.png);
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+/* MP 2024.11.09 - Evaluate this for move to Progressive Projects css. */
+table.progress td.closed {
+    background: #9AC8DA none repeat scroll 0%;
+}
+table.progress td.done {
+    background: #B8D8E4 none repeat scroll 0%;
+}
+table.progress td.todo {
+    background: #efe0e0 none repeat scroll 0%;
+}
+
+.initiative-progress-bar{
+    background-image: url("../images/initiative.png");
+    background-repeat: no-repeat;
+    padding-bottom: 5px;
+    padding-left: 35px;
+    background-size: 25px;
+    margin-left: 5px;
+    background-position-y: 8px;
+}
+
+.desired_completion_date:before {
+    font-family: FontAwesomeSolid;
+    content: "\f274";
+    padding-left: 5px; 
+    font-size: 14px;
+    color: blue;
+}
+
+.desired_begin_date:before{
+    font-family: FontAwesomeSolid;
+    content: "\f073";
+    padding-left: 5px; 
+    font-size: 14px;
+    color: green; 
+}
+
+.initiative_desired_begin_date:before{
+    font-family: FontAwesomeSolid;
+    content: "\f073";
+    padding-right: 2px;
+    padding-left: 5px;
+    font-size: 14px;
+    color: green;
+}
+.initiative-due-date:before{
+    font-family: FontAwesomeSolid;
+    content: "\f274";
+    padding-right: 5px;
+    padding-left: 5px; 
+    font-size: 14px;
+    color: blue;
+}
+
+.version-date-details:before {
+    font-family: FontAwesomeSolid;
+    content: "\f073";
+    padding-left: 5px;
+    font-size: 14px;
+    color: teal;
+    padding-right: 4px;
+}
+.version-date-details-due:before {
+    font-family: FontAwesomeSolid;
+    content: "\f334";
+    padding-left: 5px;
+    font-size: 14px;
+    color: red;
+    padding-right: 4px; 
+}
+
+.template{
+    background: none !important;
+    padding-left: unset !important;
+}
+
+/*This mod makes the text area box borders rounded*/
+/*Reference: https://gttnl.com/mpi/issues/2864#note-18*/
+.jstEditor textarea, .jstEditor iframe {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+

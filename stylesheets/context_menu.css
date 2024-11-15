@@ -1,0 +1,295 @@
+/* This css file is only to be used for modifications to the Context Menus - 
+   regardless of which plugin may hve introduces those context menu entries.
+   All other changes to customize css should be made in the applications.css
+   or in other child css as appropriate.
+*/
+
+#context-menu { position: absolute; z-index: 40; font-size: 0.9em;}
+
+#context-menu ul, #context-menu li, #context-menu a {
+  display:block;
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+#context-menu ul {
+  width:150px;
+  border: 1px solid #ccc;
+  background:white;
+  list-style:none;
+  padding:2px;
+  border-radius:2px;
+}
+
+#context-menu li {
+  position:relative;
+  padding:1px;
+  z-index:39;
+  border:1px solid white;
+}
+#context-menu li.folder ul { position:absolute; left:168px; /* IE6 */ top:-2px; max-height:300px; overflow:hidden; overflow-y: auto; }
+#context-menu li.folder>ul { left:148px; }
+
+#context-menu.reverse-y li.folder>ul { top:auto; bottom:0; }
+#context-menu.reverse-x li.folder ul { left:auto; right:168px; /* IE6 */ }
+#context-menu.reverse-x li.folder>ul { right:148px; }
+
+#context-menu a {
+  text-decoration:none !important;
+  background-repeat: no-repeat;
+  background-position: 1px 50%;
+  padding: 2px 0px 2px 20px;
+  width:100%; /* IE */
+}
+#context-menu li>a { width:auto; } /* others */
+#context-menu a.disabled, #context-menu a.disabled:hover {color: #aaa;}
+#context-menu li a.submenu { padding-right:16px; background:url("../images/bullet_arrow_right.png") right no-repeat; }
+#context-menu li:hover { border:1px solid #628db6; background-color:#eef5fd; border-radius:3px; }
+#context-menu a:hover {color:#2A5685;}
+#context-menu li.folder:hover { z-index:40; }
+#context-menu ul ul, #context-menu  li:hover ul ul { display:none; }
+#context-menu li:hover ul, #context-menu li:hover li:hover ul { display:block; }
+#context-menu a.icon-checked {background: url(../images/toggle_check.png) no-repeat 3px 40%;}
+
+
+/* selected element */
+.context-menu-selection { background-color:#70d5f8 !important; color:#f8f8f8 !important; }
+.context-menu-selection:hover { background-color:#70d5f8 !important; color:#f8f8f8  !important; }
+
+
+/*Font Awesome icon implementation for issue context menu items*/
+#context-menu ul li a.icon-edit,#context-menu ul li ul li a.icon-add,
+#context-menu ul li a.icon-fav-off,#context-menu ul li a.icon-fav,#context-menu ul li a.icon-list,
+#context-menu ul li a.icon-time-add,#context-menu ul li a.icon-copy,#context-menu ul li a.icon-del,
+#context-menu li a.submenu{
+        background: none !important;
+}
+
+#context-menu ul li a.submenu::after{
+        font-family: FontAwesomeSolid;
+        content: "\f105";
+        float: right;
+        font-size: 12px;
+}
+
+#context-menu ul li a.icon-edit::before{
+        font-family: FontAwesomeSolid;
+        content: "\f044";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.status_awesome::before{
+        font-family: FontAwesomeSolid;
+        content: "\f456";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.tracker_awesome::before{
+        font-family: FontAwesomeLight;
+        content: "\f140";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.priority_awesome::before{
+        font-family: FontAwesomeLight;
+        content: "\f161";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.initiative_awesome::before{
+        font-family: FontAwesomeBrand;
+        content: "\f41b";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.assigne_awesome::before{
+        font-family: FontAwesomeSolid;
+        content: "\f507";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.category_awesome::before{
+        font-family: FontAwesomeLight;
+        content: "\f733";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.done_ratio_awesome::before{
+        font-family: FontAwesome;
+        content: "\f241";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.cf_2_awesome::before{
+        font-family: FontAwesomeSolid;
+        content: "\f4fc";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.watchers_awesome::before{
+        font-family: FontAwesomeSolid;
+        content: "\f1e5";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li ul li a.icon-add::before{
+        font-family: FontAwesomeSolid;
+        content: "\f055";
+        margin-left: -16px;
+        padding-right: 5px;
+}
+
+#context-menu ul li a.icon-fav-off::before{
+        font-family: FontAwesome;
+        content: "\f005";
+        margin-left: -18px;
+        padding-right: 3px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.icon-fav::before{
+        font-family: FontAwesomeSolid;
+        content: "\f005";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.icon-time-add::before{
+        font-family: FontAwesomeLight;
+        content: "\f2f2";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.icon-list::before{
+        font-family: FontAwesomeSolid;
+        content: "\f0b0";
+        margin-left: -17px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.icon-copy::before{
+        font-family: FontAwesomeLight;
+        content: "\f0c5";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+#context-menu ul li a.icon-del::before{
+        font-family: FontAwesomeLight;
+        content: "\f2ed";
+        margin-left: -16px;
+        padding-right: 5px;
+        font-size: 12px;
+}
+
+/*modifications for showing value aspect icons in context menu*/
+
+/*value aspect custom field*/
+#context-menu ul li.cf_1 a.cf_1_awesome::before {
+    font-family: FontAwesomeLight;
+    content: "\f5a2";
+    margin-left: -16px;
+    padding-right: 5px;
+    font-size: 12px;
+}
+
+/* Communications & Collaboration */
+#context-menu ul li.cf_1 ul li:nth-child(1) a{
+    background: url(../images/communications.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Finance & Accounting */
+#context-menu ul li.cf_1 ul li:nth-child(2) a{
+    background: url(../images/finance.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Human Resources */
+#context-menu ul li.cf_1 ul li:nth-child(3) a{
+    background: url(../images/humanresources.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Marketing */
+#context-menu ul li.cf_1 ul li:nth-child(4) a{
+    background: url(../images/marketing.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Organization Infrastructure */
+#context-menu ul li.cf_1 ul li:nth-child(5) a{
+    background: url(../images/organization.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Procurement & Logistics */
+#context-menu ul li.cf_1 ul li:nth-child(6) a{
+    background: url(../images/logistics.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Production Operations */
+#context-menu ul li.cf_1 ul li:nth-child(7) a{
+    background: url(../images/production.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Research & Development */
+#context-menu ul li.cf_1 ul li:nth-child(8) a{
+    background: url(../images/research.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Sales */
+#context-menu ul li.cf_1 ul li:nth-child(9) a{
+    background: url(../images/sales.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Service Delivery */
+#context-menu ul li.cf_1 ul li:nth-child(10) a{
+    background: url(../images/service.png) left center no-repeat;
+    background-size: 20px;
+    padding-left: 25px;
+}
+
+/* Service Delivery */
+#context-menu ul li.cf_1 ul li:nth-child(11) a{
+    padding-left: 25px;
+}
