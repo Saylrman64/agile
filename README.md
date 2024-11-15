@@ -3,7 +3,7 @@ The Redmine theme for IT Service Run guide Agile project and strategy platform.
 
 Agile Smooth Theme version 1.3.0 by Manuel Palachuk
 
-Git Repo: https://github.com/Saylrman64/agile
+Git Repo: https://github.com/Saylrman64/itsrg-agile
 
 Next Level Platform: https://NextLevel.Nexus
 
